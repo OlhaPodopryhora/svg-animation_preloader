@@ -1,0 +1,35 @@
+@import 'normalize';
+@import 'mixins';
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	background-color: #354a60;
+}
+
+.loader {
+	@include myPos();
+	.wave {
+		transform-origin: 50% 50%;
+		transform: translate(-5%, -65%);
+		animation: rotate 3s linear infinite; 
+	}
+}
+
+@keyframes rotate {
+	0 {
+		transform: translate(-5%, -65%);
+	}
+	100% {
+		transform: translate(-5%, -65%) rotate(-360deg);
+	}
+}
+
